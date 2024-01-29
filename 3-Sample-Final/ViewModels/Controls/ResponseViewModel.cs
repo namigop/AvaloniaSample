@@ -1,6 +1,9 @@
-﻿namespace AvaloniaSampleTutorial.ViewModels.Controls;
+﻿using AvaloniaSampleTutorial.Models;
+using CommunityToolkit.Mvvm.ComponentModel;
 
-public class ResponseViewModel : ViewModelBase
+namespace AvaloniaSampleTutorial.ViewModels.Controls;
+
+public partial class ResponseViewModel : ViewModelBase
 {
-    
+    [ObservableProperty] private MethodResponse _methodResponse = new();
 }

@@ -29,11 +29,12 @@ public partial class MainPageViewModel:PageViewModel
         this.GrpcClientTree = temp;
         
         //hard coding things for now. This is just an example anyway
-        this.Items.Add(new () { Name="http://foobar/123" });
-        this.Items[0].Items.Add(new(){ Name = "SayHello"});
+        this.Items.Add(new () { Name="http://localhost:5000" });
+        for(int i= 1; i <= 10; i++)
+            this.Items[0].Items.Add(new(){ Name = $"SayHello{i}"});
 
-        this.Request = new RequestViewModel("SayHellp");
         this.Response = new ResponseViewModel();
+        this.Request = new RequestViewModel("SayHello", this.Response);
     }
 
     public ObservableCollection<Node> Items { get; } = new();

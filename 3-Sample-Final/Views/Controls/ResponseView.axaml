@@ -2,7 +2,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:AvaloniaSampleTutorial.ViewModels.Controls"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:DataType="controls:ResponseViewModel"
              x:Class="AvaloniaSampleTutorial.Views.Controls.ResponseView">
-    Welcome to Avalonia!
+   <Border>
+       <Grid RowDefinitions="Auto, *">
+           <TextBlock Grid.Row="0" Text="Response" Margin="0 18 0 0" Classes="h2"></TextBlock>
+           <TextBox Grid.Row="1" Margin="0 10 0 0"
+                    BorderBrush="LightSlateGray"
+                    CornerRadius="10"
+                    Text="{Binding MethodResponse.Response}"
+                    BorderThickness="1"></TextBox>
+       </Grid>
+   </Border>
 </UserControl>

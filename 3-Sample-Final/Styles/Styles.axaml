@@ -14,6 +14,7 @@
     
     <Style Selector="TextBlock.h2">
         <Setter Property="Foreground" Value="{StaticResource MyTextForeground}"></Setter>
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
         <Setter Property="FontSize" Value="18"></Setter>
         <Style Selector="^:pointerover">
             <Setter Property="Foreground" Value="{StaticResource MyHighlightColor}"/>

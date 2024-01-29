@@ -4,5 +4,5 @@ namespace AvaloniaSampleTutorial.Models;
 
 public partial class MethodResponse : ObservableObject
 {
-    [ObservableProperty] private string _response;
+    [ObservableProperty] private string _response = "";
 }

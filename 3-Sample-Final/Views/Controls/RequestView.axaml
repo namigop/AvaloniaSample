@@ -7,59 +7,72 @@
              x:DataType="controls:RequestViewModel"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="AvaloniaSampleTutorial.Views.Controls.RequestView">
-  <Grid>
-      <Grid RowDefinitions="*, Auto, Auto" Margin="6 0 0 0">
-          <Grid.Styles>
-              <Style Selector="StackPanel">
-                  <Setter Property="Margin" Value="0 6 0 0"></Setter>
-              </Style>
-              <Style Selector="TextBlock">
-                  <Setter Property="Margin" Value="0 0 0 6"></Setter>
-              </Style>
-          </Grid.Styles>
-          <StackPanel>
-              <TextBlock Text="Request"></TextBlock>
-              <avaloniaEdit:TextEditor TextChanged="OnTextChanged" ShowLineNumbers="True" x:Name="Editor" />
-          </StackPanel>
-          <StackPanel Grid.Row="1">
-              <TextBlock Text="Deadline"></TextBlock>
-              <DatePicker SelectedDate="{Binding MethodRequest.Deadline}"></DatePicker>
-          </StackPanel>
-          <StackPanel Grid.Row="2">
-              <StackPanel Orientation="Horizontal">
-                  <TextBlock Text="Headers"></TextBlock>
-                  <Button  Command="{Binding AddHeaderCommand}" VerticalAlignment="Center">
-                      <Viewbox Stretch="Uniform">
-                          <Canvas Width="16" Height="16">
-                              <Canvas>
-                                  <Ellipse Canvas.Left="0" Canvas.Top="0" Width="15" Height="15"
-                                           Fill="Transparent"
-                                           Stroke="LightSlateGray" StrokeThickness="1" />
-                                  <Path Data="M3,7.5h9M7.5,12V3" Stroke="LightSlateGray" StrokeThickness="1" />
-                              </Canvas>
-                          </Canvas>
-                      </Viewbox>
-                  </Button>
-              </StackPanel> 
-              <ListBox ItemsSource="{Binding MethodRequest.Headers}" MaxHeight="200">
-                  <ListBox.ItemTemplate>
-                      <DataTemplate>
-                          <StackPanel Margin="10 0 0 0">
-                              <Grid ColumnDefinitions="Auto, *">
-                                  <TextBlock Text="Key: "></TextBlock>
-                                  <TextBox Grid.Column="1" Text="{Binding Key}"></TextBox>
-                              </Grid>
-                              <Grid ColumnDefinitions="Auto, *">
-                                  <TextBlock Text="Value: "></TextBlock>
-                                  <TextBox  Grid.Column="1" Text="{Binding Value}"></TextBox>
-                              </Grid>
-                               
-                          </StackPanel>
-                      </DataTemplate>
-                  </ListBox.ItemTemplate>
-              </ListBox>
-          </StackPanel>
-      </Grid>
-      
-  </Grid>
+    <Grid>
+        <Grid RowDefinitions="Auto, Auto, *" Margin="6 0 0 0">
+            <Grid.Styles>
+                <Style Selector="StackPanel">
+                    <Setter Property="Margin" Value="0 6 0 0"></Setter>
+                </Style>
+            </Grid.Styles>
+            <StackPanel Grid.Row="0">
+                <Grid ColumnDefinitions="Auto, *">
+                    <TextBlock Text="Request"  Classes="h2"></TextBlock>
+                    <Button Margin="0 0 0 6" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Column="1" 
+                            CornerRadius="24"
+                            Command="{Binding RunCommand}"
+                            Background="#5B8657">
+                        <Viewbox Height="24" Width="24">
+                            <Canvas Width="24" Height="24" >
+                                <Path Fill="#DEDEDE" Data="M3 20V14L11 12L3 10V4L22 12Z" />
+                            </Canvas>
+                        </Viewbox>
+                    </Button>
+                </Grid>
+                
+                <!-- example usage of avaloniaedit -->
+                <avaloniaEdit:TextEditor TextChanged="OnTextChanged" ShowLineNumbers="True" x:Name="Editor"
+                                         BorderBrush="LightSlateGray" BorderThickness="1"
+                                         CornerRadius="1" MinHeight="250" />
+            </StackPanel>
+            <StackPanel Grid.Row="1">
+                <TextBlock Text="Deadline"  Classes="h2"></TextBlock>
+                <DatePicker SelectedDate="{Binding MethodRequest.Deadline}"></DatePicker>
+            </StackPanel>
+            <StackPanel Grid.Row="2">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Headers" Classes="h2"></TextBlock>
+                    <Button Command="{Binding AddHeaderCommand}" VerticalAlignment="Center">
+                        <Viewbox Stretch="Uniform">
+                            <Canvas Width="16" Height="16">
+                                <Canvas>
+                                    <Ellipse Canvas.Left="0" Canvas.Top="0" Width="15" Height="15"
+                                             Fill="Transparent"
+                                             Stroke="LightSlateGray" StrokeThickness="1" />
+                                    <Path Data="M3,7.5h9M7.5,12V3" Stroke="LightSlateGray" StrokeThickness="1" />
+                                </Canvas>
+                            </Canvas>
+                        </Viewbox>
+                    </Button>
+                </StackPanel>
+                <ListBox ItemsSource="{Binding MethodRequest.Headers}" Background="Transparent">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="10 0 0 0">
+                                <Grid ColumnDefinitions="100, *">
+                                    <TextBlock Text="Key: "></TextBlock>
+                                    <TextBox Grid.Column="1" Text="{Binding Key}"></TextBox>
+                                </Grid>
+                                <Grid ColumnDefinitions="100, *">
+                                    <TextBlock Text="Value: "></TextBlock>
+                                    <TextBox Grid.Column="1" Text="{Binding Value}"></TextBox>
+                                </Grid>
+
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
 </UserControl>

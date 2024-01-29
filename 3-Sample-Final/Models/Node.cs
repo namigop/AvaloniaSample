@@ -7,6 +7,6 @@ public partial class Node: ObservableObject
 {
     public ObservableCollection<Node> Items { get; } = new();
     
-    [ObservableProperty] private bool _isExpanded;
+    [ObservableProperty] private bool _isExpanded = true;
     [ObservableProperty] private string _name;
 }
