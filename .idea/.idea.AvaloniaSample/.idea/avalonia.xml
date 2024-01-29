@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="1-SetupProject-DataTemplates/App.axaml" value="1-SetupProject-DataTemplates/1-SetupProject-DataTemplates.csproj" />
+        <entry key="1-SetupProject-DataTemplates/Resources/Brushes.axaml" value="1-SetupProject-DataTemplates/1-SetupProject-DataTemplates.csproj" />
+        <entry key="1-SetupProject-DataTemplates/Styles/Styles.axaml" value="1-SetupProject-DataTemplates/1-SetupProject-DataTemplates.csproj" />
+        <entry key="1-SetupProject-DataTemplates/Views/Controls/MainMenuView.axaml" value="1-SetupProject-DataTemplates/1-SetupProject-DataTemplates.csproj" />
+        <entry key="1-SetupProject-DataTemplates/Views/MainWindow.axaml" value="1-SetupProject-DataTemplates/1-SetupProject-DataTemplates.csproj" />
+        <entry key="1-SetupProject-DataTemplates/Views/Pages/AboutPageView.axaml" value="1-SetupProject-DataTemplates/1-SetupProject-DataTemplates.csproj" />
+        <entry key="1-SetupProject-DataTemplates/Views/Pages/MainPageView.axaml" value="1-SetupProject-DataTemplates/1-SetupProject-DataTemplates.csproj" />
+        <entry key="1-SetupProjectAndMainWindow/App.axaml" value="1-SetupProjectAndMainWindow/1-SetupProjectAndMainWindow.csproj" />
+        <entry key="1-SetupProjectAndMainWindow/Resources/Brushes.axaml" value="1-SetupProjectAndMainWindow/1-SetupProjectAndMainWindow.csproj" />
+        <entry key="1-SetupProjectAndMainWindow/Styles/Styles.axaml" value="1-SetupProjectAndMainWindow/1-SetupProjectAndMainWindow.csproj" />
+        <entry key="1-SetupProjectAndMainWindow/ViewModels/Pages/MainPageView.axaml" value="1-SetupProjectAndMainWindow/1-SetupProjectAndMainWindow.csproj" />
+        <entry key="1-SetupProjectAndMainWindow/Views/Controls/MainMenuView.axaml" value="1-SetupProjectAndMainWindow/1-SetupProjectAndMainWindow.csproj" />
+        <entry key="1-SetupProjectAndMainWindow/Views/MainWindow.axaml" value="1-SetupProjectAndMainWindow/1-SetupProjectAndMainWindow.csproj" />
+        <entry key="1-SetupProjectAndMainWindow/Views/Pages/MainPageView.axaml" value="1-SetupProjectAndMainWindow/1-SetupProjectAndMainWindow.csproj" />
+        <entry key="2-Sample-StylesAndResources/Resources/Brushes.axaml" value="2-Sample-StylesAndResources/2-Sample-StylesAndResources.csproj" />
+        <entry key="2-Sample-StylesAndResources/Styles/Styles.axaml" value="2-Sample-StylesAndResources/2-Sample-StylesAndResources.csproj" />
+        <entry key="2-Sample-StylesAndResources/Views/Controls/MainMenuView.axaml" value="2-Sample-StylesAndResources/2-Sample-StylesAndResources.csproj" />
+        <entry key="2-Sample-StylesAndResources/Views/MainWindow.axaml" value="2-Sample-StylesAndResources/2-Sample-StylesAndResources.csproj" />
+        <entry key="2-Sample-StylesAndResources/Views/Pages/AboutPageView.axaml" value="2-Sample-StylesAndResources/2-Sample-StylesAndResources.csproj" />
+        <entry key="2-Sample-StylesAndResources/Views/Pages/MainPageView.axaml" value="2-Sample-StylesAndResources/2-Sample-StylesAndResources.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

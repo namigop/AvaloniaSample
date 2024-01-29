@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1-SetupProject-DataTemplates", "1-SetupProject-DataTemplates\1-SetupProject-DataTemplates.csproj", "{ADB2B9A8-5EC9-4957-872C-B485F4B76E7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2-Sample-StylesAndResources", "2-Sample-StylesAndResources\2-Sample-StylesAndResources.csproj", "{83D42025-15E7-432A-8E4F-799FEBAA4AF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleGrpc", "SampleGrpc\SampleGrpc.csproj", "{58E09259-3653-44FD-9F71-9A02EED5920C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADB2B9A8-5EC9-4957-872C-B485F4B76E7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADB2B9A8-5EC9-4957-872C-B485F4B76E7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADB2B9A8-5EC9-4957-872C-B485F4B76E7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADB2B9A8-5EC9-4957-872C-B485F4B76E7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83D42025-15E7-432A-8E4F-799FEBAA4AF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83D42025-15E7-432A-8E4F-799FEBAA4AF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83D42025-15E7-432A-8E4F-799FEBAA4AF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83D42025-15E7-432A-8E4F-799FEBAA4AF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58E09259-3653-44FD-9F71-9A02EED5920C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58E09259-3653-44FD-9F71-9A02EED5920C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58E09259-3653-44FD-9F71-9A02EED5920C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58E09259-3653-44FD-9F71-9A02EED5920C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
