@@ -1,0 +1,65 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:AvaloniaSampleTutorial.ViewModels.Controls"
+             xmlns:avaloniaEdit="https://github.com/avaloniaui/avaloniaedit"
+             x:DataType="controls:RequestViewModel"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AvaloniaSampleTutorial.Views.Controls.RequestView">
+  <Grid>
+      <Grid RowDefinitions="*, Auto, Auto" Margin="6 0 0 0">
+          <Grid.Styles>
+              <Style Selector="StackPanel">
+                  <Setter Property="Margin" Value="0 6 0 0"></Setter>
+              </Style>
+              <Style Selector="TextBlock">
+                  <Setter Property="Margin" Value="0 0 0 6"></Setter>
+              </Style>
+          </Grid.Styles>
+          <StackPanel>
+              <TextBlock Text="Request"></TextBlock>
+              <avaloniaEdit:TextEditor TextChanged="OnTextChanged" ShowLineNumbers="True" x:Name="Editor" />
+          </StackPanel>
+          <StackPanel Grid.Row="1">
+              <TextBlock Text="Deadline"></TextBlock>
+              <DatePicker SelectedDate="{Binding MethodRequest.Deadline}"></DatePicker>
+          </StackPanel>
+          <StackPanel Grid.Row="2">
+              <StackPanel Orientation="Horizontal">
+                  <TextBlock Text="Headers"></TextBlock>
+                  <Button  Command="{Binding AddHeaderCommand}" VerticalAlignment="Center">
+                      <Viewbox Stretch="Uniform">
+                          <Canvas Width="16" Height="16">
+                              <Canvas>
+                                  <Ellipse Canvas.Left="0" Canvas.Top="0" Width="15" Height="15"
+                                           Fill="Transparent"
+                                           Stroke="LightSlateGray" StrokeThickness="1" />
+                                  <Path Data="M3,7.5h9M7.5,12V3" Stroke="LightSlateGray" StrokeThickness="1" />
+                              </Canvas>
+                          </Canvas>
+                      </Viewbox>
+                  </Button>
+              </StackPanel> 
+              <ListBox ItemsSource="{Binding MethodRequest.Headers}" MaxHeight="200">
+                  <ListBox.ItemTemplate>
+                      <DataTemplate>
+                          <StackPanel Margin="10 0 0 0">
+                              <Grid ColumnDefinitions="Auto, *">
+                                  <TextBlock Text="Key: "></TextBlock>
+                                  <TextBox Grid.Column="1" Text="{Binding Key}"></TextBox>
+                              </Grid>
+                              <Grid ColumnDefinitions="Auto, *">
+                                  <TextBlock Text="Value: "></TextBlock>
+                                  <TextBox  Grid.Column="1" Text="{Binding Value}"></TextBox>
+                              </Grid>
+                               
+                          </StackPanel>
+                      </DataTemplate>
+                  </ListBox.ItemTemplate>
+              </ListBox>
+          </StackPanel>
+      </Grid>
+      
+  </Grid>
+</UserControl>

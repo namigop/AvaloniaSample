@@ -1,0 +1,42 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Padding="20">
+            <!-- Add Controls for Previewer Here -->
+        </Border>
+    </Design.PreviewWith>
+
+  
+    <Style Selector="TextBlock.h1">
+        <Setter Property="Foreground" Value="{StaticResource MyTextForeground}"></Setter>
+        <Setter Property="FontSize" Value="24"></Setter>
+    </Style>
+    
+    <Style Selector="TextBlock.h2">
+        <Setter Property="Foreground" Value="{StaticResource MyTextForeground}"></Setter>
+        <Setter Property="FontSize" Value="18"></Setter>
+        <Style Selector="^:pointerover">
+            <Setter Property="Foreground" Value="{StaticResource MyHighlightColor}"/>
+        </Style>
+    </Style>
+  
+    <Style Selector="TextBlock.error">
+        <Setter Property="Foreground" Value="OrangeRed"></Setter>
+    </Style>
+    
+    <Style Selector="TextBlock">
+        <Setter Property="Foreground" Value="{StaticResource MyTextForeground}"></Setter>
+    </Style>
+     
+    <!-- applies to all borders -->
+    <Style Selector="Border">
+        <Setter Property="CornerRadius" Value="8"></Setter>
+    </Style>
+    
+    <!-- applies to all windows -->
+    <Style Selector="Window">
+        <Setter Property="Background" Value="{StaticResource MyWindowBackground }"></Setter>
+        <Setter Property="ExtendClientAreaToDecorationsHint" Value="True "></Setter>
+        <Setter Property="ExtendClientAreaTitleBarHeightHint" Value="-1"></Setter>
+    </Style>
+</Styles>

@@ -1,0 +1,88 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:pages="clr-namespace:AvaloniaSampleTutorial.ViewModels.Pages"
+             xmlns:models="clr-namespace:AvaloniaSampleTutorial.Models"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:DataType="pages:MainPageViewModel"
+             x:Class="AvaloniaSampleTutorial.Views.Pages.MainPageView">
+    <Grid ColumnDefinitions="Auto, Auto, *, Auto, *">
+        <Border Grid.Column="0" Width="250" Background="{StaticResource MyControlBackground}">
+            <TreeDataGrid Source="{Binding GrpcClientTree}" ShowColumnHeaders="False" x:Name="TreeDg">
+                <TreeDataGrid.Resources>
+                    <!-- this template is for the "expandable" 1st column of the treedatagrid -->
+                    <DataTemplate x:Key="Column1CellTemplate" x:DataType="models:Node">
+                        <StackPanel Orientation="Horizontal">
+                            <Viewbox Stretch="Uniform">
+                                <Canvas Width="16" Height="16">
+                                    <Canvas>
+                                        <Polygon
+                                            Points="0.5,3.569 7.506,0.774 14.511,3.569 14.511,12.018 7.506,15.3 0.5,11.725"
+                                            Fill="Transparent" Stroke="#20A0E0" StrokeThickness="1" />
+                                        <Line StartPoint="7.50,15.183" EndPoint="7.506, 6.87" Fill="Transparent"
+                                              Stroke="#20A0E0"
+                                              StrokeThickness="1" />
+                                        <Polyline Points="0.647,3.663 7.477,6.823 14.359,3.717" Fill="Transparent"
+                                                  Stroke="#20A0E0"
+                                                  StrokeThickness="1" />
+                                    </Canvas>
+                                </Canvas>
+                            </Viewbox>
+                            <TextBlock Text="{Binding Name}" VerticalAlignment="Center" Margin="6"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                    
+                    <!-- This template for the 2nd column of the treedatagrid -->
+                    <DataTemplate x:Key="Column2CellTemplate" x:DataType="models:Node">
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel.Styles>
+                                <Style Selector="Button">
+                                    <Setter Property="Margin" Value="6 0 0 0"></Setter>
+                                    <Setter Property="Background" Value="Transparent" />
+                                </Style>
+                               
+                            </StackPanel.Styles>
+                            <Button>
+                                <Viewbox Stretch="Uniform">
+                                    <Canvas Width="16" Height="16">
+                                        <Canvas>
+                                            <Ellipse Canvas.Left="0" Canvas.Top="0" Width="15" Height="15"
+                                                     Fill="Transparent"
+                                                     Stroke="LightSlateGray" StrokeThickness="1" />
+                                            <Path Data="M3,7.5h9M7.5,12V3" Stroke="LightSlateGray" StrokeThickness="1" />
+                                        </Canvas>
+                                    </Canvas>
+                                </Viewbox>
+                            </Button>
+                            <Button>
+                                <Viewbox Stretch="Uniform">
+                                    <Canvas Width="16" Height="16">
+                                        <Canvas>
+                                            <Ellipse Canvas.Left="0" Canvas.Top="0" Width="15" Height="15"
+                                                     Fill="Transparent"
+                                                     Stroke="LightSlateGray" StrokeThickness="1" />
+                                            <Path Data="M3,7.5h9M7.5,12V3" Stroke="LightSlateGray" StrokeThickness="1" />
+                                        </Canvas>
+                                    </Canvas>
+                                </Viewbox>
+                            </Button>
+                        </StackPanel>
+                    </DataTemplate>
+                </TreeDataGrid.Resources>
+            </TreeDataGrid>
+        </Border>
+        <GridSplitter Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="8"
+                      Background="Transparent">
+        </GridSplitter>
+        <Border Grid.Column="2" Background="{StaticResource MyControlBackground}">
+            <ContentControl Content="{Binding Request}"></ContentControl>
+        </Border>
+        <GridSplitter Grid.Column="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="8"
+                      Background="Transparent">
+        </GridSplitter>
+        <Border Grid.Column="4" Background="{StaticResource MyControlBackground}">
+            <ContentControl Content="{Binding Response}"></ContentControl>
+        </Border>
+    </Grid>
+</UserControl>
